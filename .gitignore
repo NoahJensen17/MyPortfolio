@@ -1,0 +1,8 @@
+# Never commit unredacted source screenshots
+assets/redact-tool/originals/
+*.orig.png
+*.orig.jpg
+*.orig.jpeg
+
+.DS_Store
+Thumbs.db
