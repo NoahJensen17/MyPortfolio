@@ -172,6 +172,13 @@ main {
   font-size: 0.95rem;
 }
 
+.gallery-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
 .screenshot-gallery {
   display: grid;
   gap: 24px;
