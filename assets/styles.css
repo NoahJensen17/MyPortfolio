@@ -151,8 +151,9 @@ main {
   margin-bottom: 5px;
 }
 
-.back-link:hover {
-  color: var(--accent);
+.back-link:hover,
+.back-link:active {
+  color: var(--text);
 }
 
 .project-detail h1 {
