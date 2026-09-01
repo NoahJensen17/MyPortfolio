@@ -19,10 +19,10 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = os.path.normpath(os.path.join(BASE, "..", "img", "Test Calls App"))
 
 FILES = [
-    "TestCallDashboard.png",
-    "CreateScenario.png",
-    "ReviewPerCall.png",
-    "ReviewWeeklyCalls.png",
+    "1-TestCallDashboard.png",
+    "2-CreateScenario.png",
+    "3-ReviewWeeklyCalls.png",
+    "4-ReviewPerCall.png",
 ]
 
 

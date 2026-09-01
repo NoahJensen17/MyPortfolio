@@ -23,22 +23,24 @@ IMG_DIR = os.path.normpath(os.path.join(BASE, "..", "img", "Church Reporting Too
 
 WATERMARK_TEXT = "Illustrative Data - Redacted for church data privacy"
 
-FILES = [
-    "MainDashboard.png",
-    "MembershipProgress.png",
-    "ProgressData.png",
-    "VolunteerData.png",
-]
+# Maps each hand-redacted original (unnumbered) to its numbered output
+# filename, matching the gallery order set on the project-4 page.
+FILES = {
+    "MainDashboard.png": "1-MainDashboard.png",
+    "VolunteerData.png": "2-VolunteerData.png",
+    "MembershipProgress.png": "3-MembershipProgress.png",
+    "ProgressData.png": "4-ProgressData.png",
+}
 
 
 def main():
-    for name in FILES:
-        src = os.path.join(ORIGINALS_DIR, name)
-        dst = os.path.join(IMG_DIR, name)
+    for src_name, dst_name in FILES.items():
+        src = os.path.join(ORIGINALS_DIR, src_name)
+        dst = os.path.join(IMG_DIR, dst_name)
         im = Image.open(src).convert("RGB")
         stamp_watermark(im, text=WATERMARK_TEXT)
         im.save(dst)
-        print(f"Watermarked {name}")
+        print(f"Watermarked {dst_name}")
 
 
 if __name__ == "__main__":
