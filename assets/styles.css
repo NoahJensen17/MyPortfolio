@@ -160,6 +160,9 @@ main {
   font-weight: 400;
   font-size: 2.2rem;
   margin-bottom: 6px;
+}
+
+.project-detail h1 .tool-name {
   color: var(--accent);
 }
 
